@@ -1,0 +1,83 @@
+* {
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+}
+
+html,
+body {
+  width: 100%
+  height: 100%
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji'
+  font-size: 14px
+  color: $text-regular
+  background-color: $background-color
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+}
+
+#app {
+  width: 100%
+  height: 100%
+}
+
+a {
+  color: $primary-color
+  text-decoration: none
+
+  &:hover {
+    color: lighten($primary-color, 10%)
+  }
+}
+
+.clearfix {
+  &::after {
+    content: ''
+    display: table
+    clear: both
+  }
+}
+
+.page-container {
+  padding: 20px
+}
+
+.card-header {
+  display: flex
+  justify-content: space-between
+  align-items: center
+}
+
+.stat-card {
+  .stat-value {
+    font-size: 28px
+    font-weight: bold
+    color: $text-primary
+    text-align: center
+    padding: 10px 0
+  }
+
+  .stat-label {
+    font-size: 13px
+    color: $text-secondary
+    text-align: center
+  }
+}
+
+.stat-grid {
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+  gap: 20px
+  margin-bottom: 20px
+}
+
+.section-title {
+  font-size: 16px
+  font-weight: 600
+  color: $text-primary
+  margin-bottom: 16px
+  padding-left: 12px
+  border-left: 4px solid $primary-color
+}
